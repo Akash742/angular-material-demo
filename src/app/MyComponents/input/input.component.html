@@ -1,0 +1,20 @@
+<mat-form-field>
+  <mat-label>User Name</mat-label>
+  <input
+    name="username"
+    ngModel
+    #username="ngModel"
+    matInput
+    placeholder="Ex. John29"
+    value="John29"
+    required
+  />
+  <mat-hint>Type a unique username.</mat-hint>
+  <mat-error
+    *ngIf="
+        username.invalid && username.errors?.['required']
+      "
+  >
+    User Name is required
+  </mat-error>
+</mat-form-field>

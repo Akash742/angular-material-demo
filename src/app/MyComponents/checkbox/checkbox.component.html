@@ -1,0 +1,10 @@
+<mat-checkbox
+  value=""
+  #showDetails
+  checked="isChecked"
+  (change)="onChange($event)"
+  >Subscribe to Channel</mat-checkbox
+>
+<div *ngIf="showDetails.checked">
+  Show Details
+</div>
